@@ -5,5 +5,8 @@
 # my_string.split([chars]) возвращает список строк.
 # len(list) - количество элементов в списке
 
+import string
+
 my_string=str(input('введите предложение:'))
-print(max(my_string.split(), key=len))
+list= my_string.translate(str.maketrans('','', string.punctuation))
+print(max(list.split(), key=len))
