@@ -3,5 +3,18 @@
 
 # Проверить, является ли заданное натуральное число степенью двойки
 
-a = 13
-print(2 ** (a.bit_length() - 1))
+num = int(input('введите число:'))
+max_divider = 1
+for i in range(num-1, 1, -1):
+    if (num % 1 == 0):
+        if (max_divider < i):
+            max_divider = i
+
+b = 0
+
+while max_divider != 1:
+    if max_divider % 2 !=0:
+        break
+    b += 1
+
+print('максимальный делитель:', b)
