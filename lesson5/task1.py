@@ -40,7 +40,9 @@ def fun4():
 def runner(*args):
     if len(args) == 0:
         fun1()
-        fun1()
+        fun2()
+        fun3()
+        fun4()
     else:
         for i in args:
             globals()[i]()
