@@ -3,18 +3,9 @@
 
 # Проверить, является ли заданное натуральное число степенью двойки
 
-num = int(input('введите число:'))
-max_divider = 1
-for i in range(num-1, 1, -1):
-    if (num % 1 == 0):
-        if (max_divider < i):
-            max_divider = i
+def maximumdivisor(n):
+    return (n & (~(n - 1)))
 
-b = 0
-
-while max_divider != 1:
-    if max_divider % 2 !=0:
-        break
-    b += 1
-
-print('максимальный делитель:', b)
+if __name__ == '__main__':
+    n = 5
+    print(maximumdivisor(n))
